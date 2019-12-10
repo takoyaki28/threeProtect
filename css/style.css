@@ -1097,3 +1097,46 @@ table{
   color: #070707;
   font-size: 16px;
 }
+
+.my_flash_link_btn{
+  display: block;
+  text-align: center;
+}
+.my_flash_link_btn a{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 16px;
+  background: rgb(255, 85, 6);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 3px 4px #800;
+  transition: box-shadow .5s;
+}
+.my_flash_link_btn a:hover{
+  box-shadow: 0 6px 8px #800;
+}
+.my_flash_link_btn a:before{
+  content: "";
+  display: block;
+  width: 30px; height: 100px;
+  position: absolute;
+  left: -30%; top: -50%;
+  background-image: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255, .8) 50%,rgba(255,255,255,0) 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,.8)),color-stop(100%,rgba(255,255,255,0)));
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  animation: shine 3s infinite linear;
+  -webkit-animation: shine 3s infinite linear;
+}
+@keyframes shine {
+  0% { left: -30%; }
+  25% { left: 130%; }
+  100% { left: 130%; }
+}
+@-webkit-keyframes shine {
+  0% { left: -30%; }
+  25% { left: 130%; }
+  100% { left: 130%; }
+}
